@@ -2,12 +2,12 @@ const express = require('express');
 const path = require ('path'); 
 const cors = require('cors');
 //error--> require ejs
-const ejs=require('ejs');
+
 //error-->require body-parser
 // const bodyParser=require('body-parser')
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const nav= [
     {
         link:"/books",
@@ -70,6 +70,9 @@ app.get('/api/',function(req,res){
     
 });
 
+app.get('/*',function(req,res){
+    res.sendFile(path);
+});
 
 app.listen(PORT, () => {
     console.log(`Listening on ${ PORT }`);
