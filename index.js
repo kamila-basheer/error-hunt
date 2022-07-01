@@ -71,7 +71,7 @@ app.get('/api/',function(req,res){
 });
 
 app.get('/*',function(req,res){
-    res.sendFile(path.join(__dirname + 'path'));
+    res.sendFile(path.join(__dirname));
 });
 
 app.listen(PORT, () => {
