@@ -1,7 +1,7 @@
 const express = require('express'); 
 const homeRouter = express.Router();
 
-homeRouter.get('/api/',function(req,res){
+homeRouter.get('/',function(req,res){
 
     res.render('home',{});
     

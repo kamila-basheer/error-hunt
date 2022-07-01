@@ -64,15 +64,15 @@ app.use('/authors',authorsRouter);
 
 
 
-app.get('/api/',function(req,res){
+app.get('/*',function(req,res){
 
     res.render('index',{});
     
 });
 
-app.get('/*',function(req,res){
-    res.sendFile(path.join(__dirname));
-});
+// app.get('/*',function(req,res){
+//     res.send(path);
+// });
 
 app.listen(PORT, () => {
     console.log(`Listening on ${ PORT }`);

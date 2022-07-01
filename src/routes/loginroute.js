@@ -4,14 +4,14 @@ const loginRouter = express.Router();
 const userdata = require('../model/UserModel');
 // const user=userdata;
 
-loginRouter.get('/api/',function(req,res){
+loginRouter.get('/',function(req,res){
 
     res.render('login',{});
     
 })
 
 
-loginRouter.post("/api/check",function(req,res){
+loginRouter.post("/check",function(req,res){
     // var checkuser = {
         
         // uid:req.param("uid"),

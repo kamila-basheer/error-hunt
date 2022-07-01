@@ -3,13 +3,13 @@ const signupRouter = express.Router();
 // const user = require('../data/user');
 const userdata = require('../model/UserModel');
 
-signupRouter.get('/api/',function(req,res){
+signupRouter.get('/',function(req,res){
 
     res.render('signup',{});
     
 })
 
-signupRouter.post("/api/adduser",function(req,res){
+signupRouter.post("/adduser",function(req,res){
     
     // var newuser = {
     //     "uid":req.param("uid"),
